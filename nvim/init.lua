@@ -360,6 +360,7 @@ require('lazy').setup({
 
   },
   { "Vimjas/vim-python-pep8-indent" },
+  { "christoomey/vim-tmux-navigator", lazy = false },
 
   require 'custom.plugins.neogen',
   require 'custom.plugins.puppeteer',

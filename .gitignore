@@ -6,3 +6,5 @@
 !nvim/
 !tmux/
 !alacritty/
+!starship
+tmux/plugins/
