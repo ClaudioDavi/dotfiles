@@ -1,4 +1,5 @@
 --[[
+--add another comment
 
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
@@ -179,6 +180,7 @@ require('lazy').setup({
       formatters_by_ft = {
         -- first use isort and then black
         python = { "isort", "black" },
+        go = { "gofumpt", "goimports" },
         -- "inject" is a special formatter from conform.nvim, which
         -- formats treesitter-injected code. Basically, this makes
         -- conform.nvim format python codeblocks inside a markdown file.
@@ -350,6 +352,7 @@ require('lazy').setup({
       },
       ensure_installed = {
         "python",
+        "go",
         "lua",
         "toml",
         "ninja",
@@ -432,11 +435,12 @@ vim.o.termguicolors = true
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
+vim.keymap.set({ 'n' }, '<leader>uu', ':update<CR>', { remap = true })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+--
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
