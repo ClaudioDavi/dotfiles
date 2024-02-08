@@ -1,0 +1,26 @@
+layout {
+    pane split_direction="vertical" {
+        pane {
+            cwd "$HOME/finetune/ftg-lib"
+            size "80%" 
+            name "Neovim"
+            focus true
+            command "poetry shell && nvim ."
+        } 
+        pane split_direction="horizontal" {
+            poetry {args "pytest"; }
+            pane command="git" {
+                name "git"
+                cwd "$HOME/finetune/ftg-lib"
+                args "status"
+                start_suspended true
+            }
+        }
+    }
+    pane_template name="poetry" {
+        cwd "$HOME/finetune/ftg-lib"
+        command "poetry run"
+        start_suspended  true
+    }
+}
+
