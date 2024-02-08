@@ -14,8 +14,9 @@ Dotfiles managed by git + stow
 - Zellij
 
 ### Tools:
-Better `ls` with `exa`
-Better `cat` with `bat`
-Better `htop` with `btop`
-Find files with `fzf`
+- Better `ls` with `exa`
+- Better `cat` with `bat`
+- Better `htop` with `btop`
+- Find files with `fzf`
 
+Find me @ www.claudiodavi.com where I write about things that I care.
