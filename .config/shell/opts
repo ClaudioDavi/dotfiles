@@ -1,6 +1,26 @@
 #!/bin/bash
 
-export FZF_DEFAULT_OPTS="--bind 'enter:become(nvim {})' --height 50% --preview 'bat --color=always --style=numbers --line-range :20 {}'"
+# export FZF_DEFAULT_OPTS="--bind 'enter:become(nvim {})' --height 50% --preview 'bat --color=always --style=numbers --line-range :20 {}'"
+export FZF_DEFAULT_COMMAND='rg --files --hidden --vimgrep'
+
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+# Preview file content using bat 
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+# CTRL-/ to toggle small preview window to see the full command
+# CTRL-Y to copy the command into clipboard using pbcopy
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'" 
+# Print tree structure in the preview window
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
+
+# export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --vimgrep'
 
 ### ---- Completion options and styling -----------------------------------
 zstyle ':completion:*' menu select # selectable menu
