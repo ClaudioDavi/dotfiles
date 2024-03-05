@@ -156,5 +156,12 @@ symbol = " "
 [swift]
 symbol = " "
 
+[time]
+disabled = false
+format = '🕙[\[ $time \]]($style) '
+time_format = '%T'
+utc_time_offset = '-3'
+time_range = '07:00:00-18:00:00'
+
 [zig]
 symbol = " "

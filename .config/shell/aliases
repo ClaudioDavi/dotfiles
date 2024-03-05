@@ -4,8 +4,20 @@
 ### All Aliases for my configs
 ##############################
 
+## OVERRIDE SYSTEM COMMANDS
 
+alias grep="rg"
+alias htop="btop"
+alias top="btop"
+alias cat="bat -pp"
+alias ls="exa --all --icons --git-ignore"
+alias tree="exa --tree --icons --git-ignore"
+alias lh="exa -alh --icons --git-ignore"
 alias vim="nvim"
+
+## Custom Aliases
+
+alias cd=z
 alias myip="curl http://ipecho.net/plain; echo"
 alias vimconfig="cd ~/dotfiles/.config/nvim && vim ."
 alias zshconfig="vim ~/.zshrc"
@@ -14,12 +26,13 @@ alias avl="aws-vault login"
 alias ave="aws-vault exec"
 alias avefa="aws-vault exec finetune-admin"
 alias avlfa="aws-vault login finetune-admin"
-alias ftap="cd ~/finetune/ftg-api && code ."
+alias ftap="cd ~/finetune/ftg"
 alias ftsk="cd ~/finetune/skywarden && poetry shell && vim ."
 alias ftlib="zellij -l $HOME/.config/zellij/layouts/ftglib.kdl"
-alias ls="exa --all --icons --git-ignore"
-alias tree="exa --tree --icons --git-ignore"
-alias lh="exa -alh --icons --git-ignore"
-alias cat="bat -pp"
-alias htop="btop"
-alias top="btop"
+alias gs="git switch -c"
+alias gsm="git switch main"
+alias gpso="git push --set-upstream origin"
+alias gpp="git pull && git push"
+alias gc="git commit --no-verify -m "
+
+
