@@ -33,15 +33,6 @@ alias gs="git switch -c"
 alias gsm="git switch main"
 alias gpso="git push --set-upstream origin"
 alias gpp="git pull && git push"
-alias gc="git commit -S --no-verify -m "
+alias gc="git commit --no-verify -m "
 
-## Custom Magic
-alias fman="compgen -c | fzf | xargs man" # search command manual
-# Preview file content using bat 
-alias fcont="fzf --preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
-# CTRL-/ to toggle small preview window to see the full command
-# CTRL-Y to copy the command into clipboard using pbcopy
-alias fhist="history | fzf --preview 'echo {}' --preview-window up:3:hidden:wrap --bind 'ctrl-/:toggle-preview' --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort' --color header:italic --header 'Press CTRL-Y to copy command into clipboard'" 
-# Print tree structure in the preview window
-alias ftree="fzf --preview 'tree -C {}'"
 
