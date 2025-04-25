@@ -1,0 +1,63 @@
+ll 
+ls 
+ls | name 
+ls | where name aws
+ls | where name =  aws
+ls | sort-by size | reverse
+ls | sort-by modified | reverse
+ls | sort-by modified
+ps
+ps | where status == running
+ps | describe
+help commands | explore
+$env.config | explore
+set EDITOR 'nvim'
+[one two three] | to yaml
+{'name': 'nu', 'stars': 5, 'language': 'Python'} | upsert language 'Rust'
+start test.txt
+ls
+cd projects/
+ls
+touch test.txt
+start test.txt
+config.nu
+$env.config.buffer_editor = "nvim"
+config nu
+mkdir ~/.local/share/atuin/
+atuin init nu | save ~/.local/share/atuin/init.nu
+config nu
+fzf
+cd .config
+cd ~/.config/
+ls
+cd nushell/
+mkdir theme
+touch catppuccin-mocha.nu
+start catppuccin-mocha.nu
+nvim catppuccin-mocha.nu
+config nu
+ls
+http get 
+cd ~
+curl -sS https://starship.rs/install.sh | sh
+mkdir ($nu.data-dir | path join "vendor/autoload")
+config nu
+touch ~/.config/starship.toml
+mkdir .fonts
+starship preset pure-preset -o ~/.config/starship.toml
+cd projects/
+ls
+cd dotfiles/
+starship preset no-runtime-versions -o ~/.config/starship.toml
+cd rust
+zoxide
+start ~/.config/starship.toml
+cd .config
+cd ..
+..
+cd .config/
+ls
+start starship.toml
+nvim starship.toml
+ls
+cp starship.toml ../projects/dotfiles/.config/
